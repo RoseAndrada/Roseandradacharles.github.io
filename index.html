@@ -1,113 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rose Andrada Charles | Health Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f8f9fa;
-            color: #333;
-        }
+<title>Rose Andrada Charles | Health Data Analyst</title>
 
-        header {
-            background: #ffffff;
-            padding: 60px 20px;
-            text-align: center;
-        }
+<style>
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-        header p {
-            font-size: 20px;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #1f2937;
+    line-height: 1.7;
+}
 
-        nav {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-        }
+/* NAVIGATION */
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
+nav {
+    background: #0b1f3a;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 20px;
-        }
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-        .project {
-            background: white;
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-        }
-    </style>
+nav a:hover {
+    color: #8ecae6;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 560px;
+    background: linear-gradient(135deg, #0b1f3a, #174a72);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-small {
+    color: #8ecae6;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 27px;
+    font-weight: normal;
+    color: #dbeafe;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    color: #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    color: #0b1f3a;
+    padding: 12px 24px;
+    margin-right: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-outline {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    padding: 11px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    font-size: 34px;
+    color: #0b1f3a;
+    margin-bottom: 12px;
+}
+
+.section-line {
+    width: 60px;
+    height: 4px;
+    background: #247ba0;
+    margin-bottom: 30px;
+}
+
+.about p {
+    max-width: 850px;
+    font-size: 17px;
+}
+
+/* SKILLS */
+
+.skills {
+    background: white;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #eaf4fb;
+    color: #123b5d;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* PROJECTS */
+
+.projects-intro {
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    height: 180px;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #174a72;
+    font-size: 48px;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #0b1f3a;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    margin-bottom: 15px;
+    color: #4b5563;
+}
+
+.tags {
+    margin-bottom: 20px;
+}
+
+.tags span {
+    display: inline-block;
+    background: #eef2f7;
+    padding: 5px 9px;
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.project-link {
+    color: #1261a0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #0b1f3a;
+    color: white;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact .section-line {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+.contact a {
+    color: #8ecae6;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #071426;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav div {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 60px 7%;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Rose Andrada Charles</h1>
-    <h2>Health Data Analyst</h2>
-    <p>Turning healthcare data into meaningful insights.</p>
-</header>
+<!-- NAVIGATION -->
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+
+<div class="logo">Rose Charles</div>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am passionate about healthcare data analytics and using data
-        to uncover meaningful insights that support better decision-making.
-    </p>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="hero-content">
+
+<div class="hero-small">HEALTHCARE • DATA • INSIGHTS</div>
+
+<h1>Rose Andrada Charles</h1>
+
+<h2>Health Data Analyst</h2>
+
+<p>
+Transforming healthcare data into meaningful insights through
+data analysis, visualization, and evidence-based decision making.
+</p>
+
+<a class="button" href="#projects">View My Projects</a>
+
+<a class="button-outline" href="#contact">Contact Me</a>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="section-line"></div>
+
+<p>
+I am a health data analytics professional focused on transforming
+complex healthcare data into clear, meaningful insights. I enjoy
+using analytical tools to identify patterns, create interactive
+dashboards, and communicate findings that can support informed
+decision-making.
+</p>
+
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <p>Excel • SQL • Power BI • Tableau • Data Cleaning • Data Visualization</p>
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="section-line"></div>
+
+<div class="skill-container">
+
+<div class="skill">Microsoft Excel</div>
+<div class="skill">SQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">Tableau</div>
+<div class="skill">Data Cleaning</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Dashboard Design</div>
+<div class="skill">Healthcare Analytics</div>
+
+</div>
+
 </section>
+
+
+<!-- PROJECTS -->
 
 <section id="projects">
-    <h2>Featured Projects</h2>
 
-    <div class="project">
-        <h3>Healthcare Data Analysis — Excel</h3>
-        <p>
-            An Excel data analysis project featuring data cleaning,
-            pivot tables, charts, interactive slicers, and a healthcare dashboard.
-        </p>
-    </div>
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="section-line"></div>
+
+<p class="projects-intro">
+Explore some of my healthcare data analytics projects using
+Excel, SQL, Power BI, and Tableau.
+</p>
+
+
+<div class="project-grid">
+
+
+<!-- EXCEL PROJECT -->
+
+<div class="project-card">
+
+<div class="project-image">
+📊
+</div>
+
+<div class="project-content">
+
+<h3>Healthcare Data Analysis — Excel</h3>
+
+<p>
+Analyzed healthcare data using Excel to uncover trends in
+patient outcomes, treatment costs, hospital stays, and
+other key performance indicators.
+</p>
+
+<div class="tags">
+<span>Excel</span>
+<span>Data Cleaning</span>
+<span>Pivot Tables</span>
+<span>Charts</span>
+<span>Slicers</span>
+</div>
+
+<a class="project-link" href="#">
+View Project →
+</a>
+
+</div>
+</div>
+
+
+<!-- SQL PROJECT -->
+
+<div class="project-card">
+
+<div class="project-image">
+🗄️
+</div>
+
+<div class="project-content">
+
+<h3>Healthcare Data Analysis — SQL</h3>
+
+<p>
+Used SQL to explore healthcare data, answer analytical
+questions, identify trends, and generate actionable insights.
+</p>
+
+<div class="tags">
+<span>SQL</span>
+<span>PostgreSQL</span>
+<span>Data Analysis</span>
+</div>
+
+<a class="project-link" href="#">
+View Project →
+</a>
+
+</div>
+</div>
+
+
+<!-- POWER BI PROJECT -->
+
+<div class="project-card">
+
+<div class="project-image">
+📈
+</div>
+
+<div class="project-content">
+
+<h3>Healthcare Dashboard — Power BI</h3>
+
+<p>
+Developed an interactive Power BI dashboard to monitor
+healthcare performance indicators and communicate key insights.
+</p>
+
+<div class="tags">
+<span>Power BI</span>
+<span>DAX</span>
+<span>Data Modeling</span>
+<span>Dashboard</span>
+</div>
+
+<a class="project-link" href="#">
+View Project →
+</a>
+
+</div>
+</div>
+
+
+<!-- TABLEAU PROJECT -->
+
+<div class="project-card">
+
+<div class="project-image">
+📉
+</div>
+
+<div class="project-content">
+
+<h3>Telehealth Analytics — Tableau</h3>
+
+<p>
+Analyzed telehealth alerts and clinical response performance
+using interactive Tableau visualizations.
+</p>
+
+<div class="tags">
+<span>Tableau</span>
+<span>Telehealth</span>
+<span>Data Visualization</span>
+</div>
+
+<a class="project-link" href="#">
+View Project →
+</a>
+
+</div>
+</div>
+
+</div>
 
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>LinkedIn | GitHub</p>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Let's Connect</h2>
+
+<div class="section-line"></div>
+
+<p>
+Interested in my work? Connect with me or explore my projects.
+</p>
+
+<a href="#">LinkedIn</a>
+
+<a href="#">GitHub</a>
+
 </section>
+
 
 <footer>
-    <p>© 2026 Rose Andrada Charles | Health Data Analyst Portfolio</p>
+
+© 2026 Rose Andrada Charles • Health Data Analyst Portfolio
+
 </footer>
 
 </body>
